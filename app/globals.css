@@ -2,7 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body { height: 100%; background: #ffffff; }
-.card { @apply rounded-2xl border bg-white shadow-sm; }
-.btn { @apply px-4 py-2 border rounded-xl; }
-.pro-badge { @apply inline-flex items-center px-2 py-0.5 text-xs rounded-full bg-black text-white; }
+/* ---- Theme tokens (keeps your current color feel, adds subtle accent) ---- */
+:root {
+  --ol-bg: #0a0a0a;         /* dark hero bg */
+  --ol-card: #ffffff;
+  --ol-muted: #f6f7f9;      /* light section bg */
+  --ol-text: #0f172a;       /* slate-900 */
+  --ol-sub: #475569;        /* slate-600 */
+  --ol-border: #e5e7eb;     /* gray-200 */
+  --ol-accent: #111827;     /* near-black accent (as agreed color vibe) */
+  --ol-accent-500: #111827;
+  --ol-accent-400: #1f2937;
+  --ol-accent-300: #374151;
+  --ol-gradient-1: #0b0f1a; /* subtle gradient stops */
+  --ol-gradient-2: #111827;
+}
+
+html, body { height: 100%; background: #ffffff; color: var(--ol-text); }
+
+/* Cards & surfaces */
+.card { @apply rounded-2xl border bg-white shadow-sm border-gray-200; }
+.surface-muted { background: var(--ol-muted); }
+
+/* Buttons */
+.btn { @apply inline-flex items-center justify-center px-4 py-2 rounded-xl text-sm transition-all border border-gray-200 bg-white hover:shadow-md; }
+.btn-primary { @apply text-white; background: linear-gradient(135deg, var(--ol-accent-400), var(--ol-accent)); }
+.btn-primary:hover { filter: brightness(1.05); }
+.btn-ghost { @apply border-transparent text-gray-700 hover:bg-gray-100; }
+
+/* Badges */
+.badge { @apply inline-flex items-center px-2 py-0.5 rounded-full text-xs; background: #0f172a; color: #fff; }
+
+/* Ribbons */
+.ribbon {
+  position: absolute; top: 12px; right: -40px; transform: rotate(35deg);
+  @apply text-xs font-semibold px-12 py-1 text-white;
+  background: linear-gradient(135deg, var(--ol-accent-300), var(--ol-accent));
+}
+
+/* Fancy hero */
+.hero {
+  background: radial-gradient(1200px 500px at 20% -10%, rgba(17,24,39,0.12), transparent 60%),
+              linear-gradient(180deg, #fff 0%, #fff 40%, var(--ol-muted) 100%);
+}
+.hero-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.85), rgba(255,255,255,0.98));
+  backdrop-filter: blur(6px);
+}
+
+/* Section header */
+.section-title { @apply text-2xl md:text-3xl font-semibold; }
+.section-sub { @apply text-sm text-gray-600 mt-1; }
