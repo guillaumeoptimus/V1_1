@@ -9,10 +9,10 @@ function Feat({children}){
 
 function Offer({ title, intro, bullets, benefits, slug, featured }){
   return (
-    <div className={"offer " + (featured ? "ring-2 ring-offset-2 ring-offset-white ring-[rgba(110,231,255,.6)]" : "")}>
-      {featured ? <div className="absolute -right-6 top-6 rotate-45 text-[10px] bg-black text-white px-8 py-1 rounded-full shadow-sm">Recommandé</div> : null}
+    <div className={"offer " + (featured ? "ring-2 ring-offset-2 ring-offset-white ring-[rgba(183,255,90,.6)]" : "")}>
+      {featured ? <div className="absolute -right-6 top-6 rotate-45 text-[10px] bg-[#0f172a] text-white px-8 py-1 rounded-full shadow-sm">Recommandé</div> : null}
       <div className="flex items-center gap-3">
-        <Marker>✨</Marker>
+        <Marker>⚡</Marker>
         <div className="text-xl font-semibold">{title}</div>
       </div>
       <p className="text-sm text-gray-600 mt-2">{intro}</p>
