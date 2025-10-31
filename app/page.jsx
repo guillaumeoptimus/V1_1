@@ -1,5 +1,4 @@
 import Hero from "@/components/marketing/Hero";
-import Proof from "@/components/marketing/Proof";
 import OffersGrid from "@/components/marketing/OffersGrid";
 import Logos from "@/components/marketing/Logos";
 import Process from "@/components/marketing/Process";
@@ -14,15 +13,11 @@ export default function SiteLanding(){
       <Hero />
       <Logos />
       <div className="space-y-6">
-        <SectionHeader title="Des résultats concrets" sub="Quelques repères issus de missions récentes" />
-        <Proof />
-      </div>
-      <div className="space-y-6">
         <SectionHeader title="Offres" sub="Choisissez la formule qui correspond à votre maturité commerciale" />
         <OffersGrid />
       </div>
       <div className="space-y-6">
-        <SectionHeader title="Une méthode simple et efficace" sub="De l’ICP au closing, tout est cadré et mesuré" />
+        <SectionHeader title="Notre méthode" sub="Un cadre simple et exigeant, de l’ICP au closing — sans lourdeur" />
         <Process />
       </div>
       <div className="space-y-6">
