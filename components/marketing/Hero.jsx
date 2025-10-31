@@ -23,7 +23,7 @@ export default function Hero(){
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/offres" className="btn btn-primary">Voir les offres</Link>
-            <Link href="/app-connexion" className="btn">Créer un compte & accéder au dashboard</Link>
+            <Link href="/dashboard" className="btn">Accéder au dashboard</Link>
           </div>
           <div className="mt-4 text-xs text-gray-500">Déploiement simple • Reporting clair • Variable au succès possible</div>
         </div>

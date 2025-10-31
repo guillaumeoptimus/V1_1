@@ -85,10 +85,10 @@ export default function OffreDetail({ params }){
       </div>
       <div className="card p-6">
         <div className="font-semibold mb-2">Prochaine étape</div>
-        <p className="text-sm text-gray-600">Planifions un échange de 20 minutes pour cadrer ensemble le périmètre.</p>
+        <p className="text-sm text-gray-600">Consultez le dashboard pour voir la mécanique et la structure proposées.</p>
         <div className="flex gap-2 mt-3">
           <Link href="/contact" className="btn">Demander un échange</Link>
-          <Link href="/app-connexion" className="btn">Créer un compte & accéder au dashboard</Link>
+          <Link href="/dashboard" className="btn btn-primary">Accéder au dashboard</Link>
         </div>
       </div>
     </div>
