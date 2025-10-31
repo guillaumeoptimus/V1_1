@@ -1,0 +1,47 @@
+<svg width="900" height="560" viewBox="0 0 900 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ecfeff"/>
+      <stop offset="100%" stop-color="#eef2ff"/>
+    </linearGradient>
+    <linearGradient id="g2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#94c1ff"/>
+      <stop offset="100%" stop-color="#c4b5fd"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="560" rx="24" fill="white"/>
+  <rect x="16" y="16" width="868" height="528" rx="18" fill="url(#g1)" stroke="rgba(15,23,42,0.08)"/>
+  <!-- Top bar -->
+  <rect x="36" y="36" width="160" height="16" rx="8" fill="#0f172a" opacity="0.8"/>
+  <rect x="208" y="36" width="110" height="16" rx="8" fill="#94a3b8" opacity="0.5"/>
+  <rect x="330" y="36" width="90" height="16" rx="8" fill="#94a3b8" opacity="0.4"/>
+  <!-- Left nav -->
+  <rect x="36" y="68" width="160" height="24" rx="12" fill="#0f172a" opacity="0.08"/>
+  <rect x="36" y="100" width="160" height="24" rx="12" fill="#0f172a" opacity="0.06"/>
+  <rect x="36" y="132" width="160" height="24" rx="12" fill="#0f172a" opacity="0.06"/>
+  <rect x="36" y="164" width="160" height="24" rx="12" fill="#0f172a" opacity="0.06"/>
+  <!-- KPI cards -->
+  <rect x="216" y="84" width="200" height="110" rx="14" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="426" y="84" width="200" height="110" rx="14" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="636" y="84" width="200" height="110" rx="14" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="236" y="104" width="90" height="10" rx="5" fill="#334155" opacity="0.8"/>
+  <rect x="236" y="122" width="130" height="20" rx="10" fill="url(#g2)" opacity="0.35"/>
+  <rect x="446" y="104" width="90" height="10" rx="5" fill="#334155" opacity="0.8"/>
+  <rect x="446" y="122" width="130" height="20" rx="10" fill="url(#g2)" opacity="0.35"/>
+  <rect x="656" y="104" width="90" height="10" rx="5" fill="#334155" opacity="0.8"/>
+  <rect x="656" y="122" width="130" height="20" rx="10" fill="url(#g2)" opacity="0.35"/>
+  <!-- Main grid -->
+  <rect x="216" y="210" width="620" height="150" rx="16" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="236" y="232" width="180" height="12" rx="6" fill="#334155" opacity="0.8"/>
+  <rect x="236" y="254" width="560" height="10" rx="5" fill="#94a3b8" opacity="0.4"/>
+  <rect x="236" y="270" width="520" height="10" rx="5" fill="#94a3b8" opacity="0.3"/>
+  <rect x="236" y="286" width="520" height="10" rx="5" fill="#94a3b8" opacity="0.3"/>
+  <rect x="236" y="302" width="380" height="10" rx="5" fill="#94a3b8" opacity="0.3"/>
+  <!-- Right column cards -->
+  <rect x="216" y="372" width="300" height="132" rx="16" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="536" y="372" width="300" height="132" rx="16" fill="white" stroke="rgba(15,23,42,0.08)"/>
+  <rect x="236" y="394" width="180" height="12" rx="6" fill="#334155" opacity="0.8"/>
+  <rect x="236" y="414" width="260" height="10" rx="5" fill="#94a3b8" opacity="0.35"/>
+  <rect x="556" y="394" width="180" height="12" rx="6" fill="#334155" opacity="0.8"/>
+  <rect x="556" y="414" width="260" height="10" rx="5" fill="#94a3b8" opacity="0.35"/>
+</svg>
