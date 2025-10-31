@@ -3,45 +3,30 @@ import Link from "next/link";
 const MAP = {
   "mise-en-place": {
     title: "Mise en place",
-    price: "Forfait ≈ 2 500 €",
     intro: "Pack pour poser des bases solides et lancer votre prospection en < 2 semaines.",
     modules: ["Audit ICP", "Stack & séquences", "Scripts call/email", "Assets & tests"],
     deliverables: ["Dossier ICP + scripts", "Séquences prêtes", "Playbook d’exécution"],
-    options: ["Landing courte de campagne", "Setup Lemlist/Domaines", "Scraping & enrichissement de leads"],
-    objections: ["On veut du rapide", "On n’a pas l’équipe", "On a déjà testé sans succès"],
-    answers: [
-      "Cadre léger, exécution pragmatique, itérations courtes.",
-      "On prend en charge l’opérationnel et documente tout.",
-      "On repart d’un ICP précis et de messages testés en petits lots."
-    ]
+    options: ["Landing courte de campagne", "Setup Lemlist/Domaines", "Enrichissement de leads"],
+    problems: ["Manque de clarté sur l’ICP", "Messages qui ne convertissent pas", "Trop d’outils, pas assez d’action"],
+    outcomes: ["Ciblage net & messages qui accrochent", "Séquences prêtes et testées", "Base saine pour scaler"]
   },
   "developpement": {
     title: "Développement",
-    price: "≈ 3 000 €/mois",
     intro: "Exécution continue pour générer des RDV qualifiés et alimenter votre pipe.",
     modules: ["Prospection multi-canal", "Prise de RDV", "Itérations hebdo", "Reporting"],
     deliverables: ["Dashboard KPI", "Liste RDV planifiés", "Journal d’actions"],
     options: ["Relances automatisées + call blitz", "AB testing messages / canaux", "Qualification stricte des RDV"],
-    objections: ["Lead qualité ?", "Visibilité ?", "Adaptation secteur ?"],
-    answers: [
-      "Qualification avant RDV, critères définis avec vous.",
-      "Dashboard + point hebdo avec plan d’action.",
-      "Scripts/personas ajustés en continu avec vos retours."
-    ]
+    problems: ["Pipe qui stagne", "Mauvaise qualification", "Manque de régularité"],
+    outcomes: ["Flux de RDV qualifiés", "Pipeline lisible", "Amélioration continue documentée"]
   },
   "direction-commerciale-externalisee": {
     title: "Direction commerciale externalisée",
-    price: "Sur-mesure",
     intro: "Pilotage global : stratégie, process, équipe, closing, et gouvernance pipeline.",
     modules: ["Stratégie & orga", "Pilotage forecast", "Coaching & closing", "Incentives & variable"],
     deliverables: ["Roadmap trimestrielle", "Process & playbooks", "Comex pack"],
     options: ["Coaching des sales", "Ateliers pricing/offres", "Implémentation CRM light"],
-    objections: ["Temps/charge ?", "Change management ?", "ROI ?"],
-    answers: [
-      "Cadence de pilotage adaptée à votre rythme.",
-      "Pédagogie et documentation, adoption progressive.",
-      "Indicateurs clairs et variable aligné au succès."
-    ]
+    problems: ["Visibilité faible sur le pipe", "Process non documentés", "Cycle long & perte d’élan"],
+    outcomes: ["Gouvernance pipeline robuste", "Équipe outillée & rituels efficaces", "Impact mesuré sur le chiffre"]
   }
 };
 
@@ -49,7 +34,7 @@ function List({title, items}){
   return (
     <div className="card p-6">
       <div className="font-semibold">{title}</div>
-      <ul className="mt-2 text-sm text-gray-600 list-disc pl-5 space-y-1">
+      <ul className="mt-2 text-sm text-gray-700 list-disc pl-5 space-y-1">
         {items.map((m,i)=>(<li key={i}>{m}</li>))}
       </ul>
     </div>
@@ -66,7 +51,6 @@ export default function OffreDetail({ params }){
     <div className="space-y-6">
       <Link href="/offres" className="text-sm text-gray-500 hover:underline">← Retour aux offres</Link>
       <div className="card p-6">
-        <div className="text-sm text-gray-500">{data.price}</div>
         <h1 className="text-3xl font-semibold">{data.title}</h1>
         <p className="text-gray-600 mt-2">{data.intro}</p>
       </div>
@@ -76,19 +60,16 @@ export default function OffreDetail({ params }){
       </div>
       <div className="grid md:grid-cols-2 gap-4">
         <List title="Options" items={data.options} />
-        <div className="card p-6">
-          <div className="font-semibold">Réponses aux objections</div>
-          <ul className="mt-2 text-sm text-gray-600 list-disc pl-5 space-y-1">
-            {data.answers.map((m,i)=>(<li key={i}>{m}</li>))}
-          </ul>
-        </div>
+        <List title="Problèmes résolus" items={data.problems} />
       </div>
       <div className="card p-6">
-        <div className="font-semibold mb-2">Prochaine étape</div>
-        <p className="text-sm text-gray-600">Consultez le dashboard pour voir la mécanique et la structure proposées.</p>
-        <div className="flex gap-2 mt-3">
-          <Link href="/contact" className="btn">Demander un échange</Link>
-          <Link href="/dashboard" className="btn btn-primary">Accéder au dashboard</Link>
+        <div className="font-semibold mb-1">Résultats attendus</div>
+        <ul className="mt-1 text-sm text-gray-700 list-disc pl-5 space-y-1">
+          {data.outcomes.map((m,i)=>(<li key={i}>{m}</li>))}
+        </ul>
+        <div className="flex gap-2 mt-4">
+          <Link href="/contact" className="btn">Parler à un expert</Link>
+          <Link href="/dashboard" className="btn btn-primary">Voir le dashboard</Link>
         </div>
       </div>
     </div>
